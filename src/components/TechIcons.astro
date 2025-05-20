@@ -1,0 +1,22 @@
+---
+const icons = [
+  "devicon-typescript-plain colored",
+  "devicon-python-plain colored",
+  "devicon-javascript-plain colored",
+  "devicon-react-original colored",
+  "devicon-go-plain colored",
+  "devicon-docker-plain colored",
+  "devicon-azure-plain colored",
+  "devicon-amazonwebservices-plain colored",
+  "devicon-azuresqldatabase-plain colored",
+  "devicon-azuredevops-plain colored",
+];
+---
+
+<div class="flex flex-wrap justify-center gap-4 my-6">
+  {icons.map(icon => (
+    <div class="p-3 rounded-lg bg-white/10 backdrop-blur-sm shadow-md">
+      <i class={icon + " text-5xl"} title={icon.split('-')[1]}></i>
+    </div>
+  ))}
+</div>

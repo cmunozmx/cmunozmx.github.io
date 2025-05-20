@@ -1,16 +1,80 @@
 ---
+import TechIcons from '../components/TechIcons.astro';
+import "../styles/global.css";
 
 ---
-
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carlos Muñoz – Full Stack Developer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
+  </head>
+  <body class="min-h-screen bg-gradient-to-b from-black to-[#1d0826] text-white font-sans">
+    <main class="max-w-6xl mx-auto px-3 py-10 mt-8">
+      <nav>
+        <div>Icon</div>
+        <div>&gt; Projects</div>
+        <div>Skills</div>
+        <div>Experience</div>
+        <div>Connect</div>
+      </nav>
+      <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+        <!-- Left Side: Text -->
+        <div class="md:w-[70%] text-center md:text-left">
+          <span class="text-slate-700 dark:text-slate-300"><span class="mb-4 block text-[2.5rem] font-[1000] leading-none md:mb-6 md:text-7xl" style="opacity: 1; transform: none;">
+            I'm<!-- --> 
+            <strong class="text-purple-600">Carlos</strong> 
+            <!-- -->Muñoz<!-- -->
+             </span>
+             
+          <p class="text-lg md:text-2lg text-gray-300 mt-4">
+            Tech Lead · Sr. Full Stack Developer · DevOps · Cloud Engineer · AI Enthusiast
+          </p>
+          <p class="mt-6 text-gray-400">
+            I design, build and scale full-stack applications and data pipelines. Passionate about developer tools, backend architecture and crafting high-performance systems with clean design.
+          </p>
+        </div>
+
+        <!-- Right Side: Image -->
+        <div class="md:w-[30%] flex justify-center">
+          <div class="w-52 h-52 rounded-full overflow-hidden shadow-lg">
+            <img src="/me-professional-ghibli.png" alt="Profile" class="object-cover w-full h-full" />
+          </div>
+        </div>
+      </div>
+      
+
+
+      <div class="mt-8">
+        <h2 class="text-lg font-semibold text-white mb-4">Tech Stack</h2>
+        <TechIcons />
+      </div>
+
+      <div class="mt-12 space-y-6">
+        <section>
+          <h2 class="text-2xl font-bold mb-2">Highlighted Projects</h2>
+          <ul class="list-disc list-inside text-gray-300">
+            <li>
+              <strong>Starbucks LATAM App:</strong> Led backend migration to Azure, created high-performance Golang microservice, directed 15-person international team.
+            </li>
+            <li>
+              <strong>Developer Portal (Automotive Germany):</strong> Built RBAC plugin using Backstage, deployed CI/CD via ArgoCD, Azure.
+            </li>
+            <li>
+              <strong>Data Automation (US Automotive Reseller):</strong> Designed Snowflake warehouse, optimized data extraction from weeks to 5 hours.
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold mb-2">Contact</h2>
+          <p class="text-gray-400">
+            📧 munoz [dot] josecarlos [at] gmail [dot] com<br />
+            🔗 <a href="https://github.com/cmunozmx" target="_blank" class="underline">GitHub</a> · <a href="https://linkedin.com/in/carlos-munoz-mx" target="_blank" class="underline">LinkedIn</a>
+          </p>
+        </section>
+      </div>
+    </main>
+  </body>
 </html>
