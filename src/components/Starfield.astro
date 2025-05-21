@@ -1,0 +1,52 @@
+---
+---
+<div id="stars-layer" class="absolute inset-0 z-0 pointer-events-none"></div>
+
+
+<script is:global>
+  document.addEventListener('DOMContentLoaded', () => {
+    const starsLayer = document.getElementById('stars-layer');
+    const canvas = document.createElement('canvas');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    canvas.style.width = '100%';
+    canvas.style.height = '100%';
+    canvas.style.display = 'block';
+    canvas.style.position = 'absolute';
+    canvas.style.top = 0;
+    canvas.style.left = 0;
+    canvas.style.zIndex = 0;
+    starsLayer.appendChild(canvas);
+
+    const ctx = canvas.getContext('2d');
+    const stars = Array.from({ length: 150 }, () => ({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      radius: Math.random() * 1.5 + 0.5
+    }));
+
+    function drawStars(offsetX = 0, offsetY = 0) {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = 'rgba(255, 255, 255, 0.14)';
+      for (const star of stars) {
+        ctx.beginPath();
+        ctx.arc(star.x + offsetX, star.y + offsetY, star.radius, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    drawStars();
+
+    window.addEventListener('mousemove', (e) => {
+      const offsetX = (e.clientX / window.innerWidth - 0.5) * -23;
+      const offsetY = (e.clientY / window.innerHeight - 0.5) * -23 ;
+      drawStars(offsetX, offsetY);
+    });
+
+    window.addEventListener('resize', () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      drawStars();
+    });
+  });
+</script>

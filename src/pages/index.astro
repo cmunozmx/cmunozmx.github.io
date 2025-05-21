@@ -1,5 +1,6 @@
 ---
 import TechIcons from '../components/TechIcons.astro';
+import Starfield from '../components/Starfield.astro';
 import "../styles/global.css";
 
 ---
@@ -11,6 +12,9 @@ import "../styles/global.css";
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
   </head>
   <body class="overflow-hidden min-h-screen bg-gradient-to-b from-black to-[#1d0826] text-white font-sans">
+    <!-- Starfield Background Layer -->
+     <Starfield />
+ 
     <main class="max-w-5xl mx-auto px-3 py-10 mt-8">
       <nav class="flex flex-wrap items-center gap-x-6 px-4 py-3 bg-black text-white">
         <!-- Left: Logo and Links -->
@@ -52,7 +56,7 @@ import "../styles/global.css";
 
 
       <div class="mt-8">
-        <h2 class="text-lg font-semibold text-white mb-4">Tech Stack</h2>
+        <h2 class="text-2xl font-bold mb-2">Tech Stack</h2>
         <TechIcons />
       </div>
 
@@ -61,6 +65,8 @@ import "../styles/global.css";
           <h2 class="text-2xl font-bold mb-2">Highlighted Projects</h2>
           <ul class="list-disc list-inside text-gray-300">
             <li>
+              <span>&#128241;</span>
+
               <strong>Starbucks LATAM App:</strong> Led backend migration to Azure, created high-performance Golang microservice, directed 15-person international team.
             </li>
             <li>
