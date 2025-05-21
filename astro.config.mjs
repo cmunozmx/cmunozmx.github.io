@@ -8,6 +8,8 @@ export default defineConfig({
   server: {
     host: "0.0.0.0"
   },
+  site: 'https://cmunozmx.github.io',
+  base: 'cmunozmx.github.io',
 
   vite: {
     plugins: [tailwindcss()]
