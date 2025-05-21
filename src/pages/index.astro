@@ -10,14 +10,19 @@ import "../styles/global.css";
     <title>Carlos Muñoz – Full Stack Developer</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
   </head>
-  <body class="min-h-screen bg-gradient-to-b from-black to-[#1d0826] text-white font-sans">
-    <main class="max-w-6xl mx-auto px-3 py-10 mt-8">
-      <nav>
-        <div>Icon</div>
-        <div>&gt; Projects</div>
-        <div>Skills</div>
-        <div>Experience</div>
-        <div>Connect</div>
+  <body class="overflow-hidden min-h-screen bg-gradient-to-b from-black to-[#1d0826] text-white font-sans">
+    <main class="max-w-5xl mx-auto px-3 py-10 mt-8">
+      <nav class="flex flex-wrap items-center gap-x-6 px-4 py-3 bg-black text-white">
+        <!-- Left: Logo and Links -->
+        <div class="flex items-center gap-x-6">
+          <div class="flex items-center space-x-2">
+            <img src="/cmlogo-small.png"/>
+          </div>
+          <a href="#projects" class="text-purple-400 hover:text-purple-300 text-sm">Projects</a>
+          <a href="#skills" class="hover:text-blue-400 text-sm">Tech Stack</a>
+          <a href="#experience" class="hover:text-blue-400 text-sm">Experience</a>
+          <a href="#contact" class="hover:text-blue-400 text-sm">Contact</a>
+        </div>
       </nav>
       <div class="flex flex-col md:flex-row items-center justify-between gap-8">
         <!-- Left Side: Text -->
